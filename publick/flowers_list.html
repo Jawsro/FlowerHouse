@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/flowers_list.css">
+         <link rel="stylesheet" href="CSS/login_car.css">
+    <script src="JS/jquery-1.11.3.js"></script>
+    <script src="JS/car.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <aside></aside>
+    <div id="flower-big">
+        <div id="flower-left">
+            <div class="flower-up">
+                <span>热卖推荐</span>
+            </div>
+            <!--<span id="btn1" style="color: #F8893E"><img src="img/arrow-t.png" alt=""></span>-->
+            <div class="flower-down" id="s3">
+                <ul>
+                <li class="down1">
+                    <div><img src="img/3.jpg" alt=""></div>
+                    <div class="flower-down-1">
+                        <p>心上人——精美韩式花束</p>
+                        <p class="p1">￥：268.00</p>
+                    </div>
+                </li>
+                <li class="down2">
+                    <div><img src="img/6.jpg" alt=""></div>
+                    <div class="flower-down-2">
+                        <p>月光女神——11朵白玫瑰+洋桔梗+雏菊+尤加利</p>
+                        <p class="p2">￥：268.00</p>
+                    </div>
+                </li>
+                <li class="down3">
+                    <div><img src="img/2.jpg" alt=""></div>
+                    <div class="flower-down-3">
+                        <p>不变的承诺——精品白玫瑰洋桔梗花束</p>
+                        <p class="p3">￥：268.00</p>
+                    </div>
+                </li>
+                <li class="down4">
+                    <div><img src="img/8.jpg" alt=""></div>
+                    <div class="flower-down-4">
+                        <p>感恩的心——28朵粉色康乃馨+尤加利精美花束包装</p>
+                        <p class="p4">￥：268.00</p>
+                    </div>
+                </li>
+                <li class="down5">
+                    <div><img src="img/9.jpg" alt=""></div>
+                    <div class="flower-down-5">
+                        <p>迷你花束</p>
+                        <p class="p5">￥：268.00</p>
+                    </div>
+                </li>
+                <li class="down6">
+                    <div><img src="img/7.jpg" alt=""></div>
+                    <div class="flower-down-6">
+                        <p>曼妙幽紫</p>
+                        <p class="p6">￥：268.00</p>
+                    </div>
+                </li>
+                <li class="down7">
+                    <div><img src="img/4.jpg" alt=""></div>
+                    <div class="flower-down-7">
+                        <p>相守一生</p>
+                        <p class="p7">￥：268.00</p>
+                    </div>
+                </li>
+                <li class="down8">
+                    <div><img src="img/1.jpg" alt=""></div>
+                    <div class="flower-down-8">
+                        <p>千年之恋</p>
+                        <p class="p8">￥：268.00</p>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            <!--<span id="btn2" style="color: #F8893E"><img src="img/arrow-b.png" alt=""></span> -->
+            <script type="text/javascript">
+                (function($) {
+		            	$.fn.extend({
+			            	Scroll: function(opt, callback) {
+					//参数初始化
+					if (!opt) var opt = {};
+					var _btnUp = $("#" + opt.up); //Shawphy:向上按钮
+					var _btnDown = $("#" + opt.down); //Shawphy:向下按钮
+					var timerID;
+					var _this = this.eq(0).find("ul:first");
+					var lineH = _this.find("li:first").height(400), //获取行高
+						line = opt.line ? parseInt(opt.line, 10) : parseInt(this.height() / lineH, 10), //每次滚动的行数，默认为一屏，即父容器高度
+						speed = opt.speed ? parseInt(opt.speed, 10) : 500; //卷动速度，数值越大，速度越慢（毫秒）
+					timer = opt.timer //?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
+					if (line == 0) line = 1;
+					var upHeight = 0 - line * lineH;
+					//滚动函数
+					var scrollUp = function() {
+						_btnUp.unbind("click", scrollUp); //Shawphy:取消向上按钮的函数绑定
+						_this.animate({
+							marginTop: upHeight
+						}, speed, function() {
+							for (i = 1; i <= line; i++) {
+								_this.find("li:first").appendTo(_this);
+							}
+							_this.css({
+								marginTop: 0
+							});
+							_btnUp.bind("click", scrollUp); //Shawphy:绑定向上按钮的点击事件
+						});
+
+					}
+					//Shawphy:向下翻页函数
+					var scrollDown = function() {
+						_btnDown.unbind("click", scrollDown);
+						for (i = 1; i <= line; i++) {
+							_this.find("li:last").show().prependTo(_this);
+						}
+						_this.css({
+							marginTop: upHeight
+						});
+						_this.animate({
+							marginTop: 0
+						}, speed, function() {
+							_btnDown.bind("click", scrollDown);
+						});
+					}
+					//Shawphy:自动播放
+					var autoPlay = function() {
+						if (timer) timerID = window.setInterval(scrollUp, timer);
+					};
+					var autoStop = function() {
+						if (timer) window.clearInterval(timerID);
+					};
+					//鼠标事件绑定
+					_this.hover(autoStop, autoPlay).mouseout();
+					_btnUp.css("cursor", "pointer").click(scrollUp).hover(autoStop, autoPlay); //Shawphy:向上向下鼠标事件绑定
+					_btnDown.css("cursor", "pointer").click(scrollDown).hover(autoStop, autoPlay);
+
+				}
+			})
+		})(jQuery);
+
+		$(document).ready(function() {
+			$("#s3").Scroll({
+				line: 1,
+				speed: 500,
+				timer: 2000,
+				up: "btn1",
+				down: "btn2"
+			});
+		});
+	  
+</script> 
+        </div>
+        <div id="flower-right">
+            <div class="flower-right-index1">
+                <div class="magnifier" id="magnifier1">
+                   
+                   <div class="l-img">
+           <div class="b-img active">
+                <img id="mimg" src="img/6.jpg" alt="" >
+                <!--<a href="javascript:;"></a>-->
+				<!--  鼠标滑过中图片时的黑色半透明-->
+				<div id="mask" class="d-none"></div>
+				<!--  中图片上面的遮罩层-->
+				<div id="super-mask"></div>
+           </div>
+		   <!--  隐藏的两张  -->
+		   <!--<div class="b-img">
+                <img src="img/product_list/111.jpg" alt="">
+                <a href="javascript:;"></a>
+           </div>
+		   <div class="b-img">
+                <img src="img/product_list/1111.jpg" alt="">
+                <a href="javascript:;"></a>
+           </div>-->
+		   <!--   放大镜效果的大图 -->
+		    <div id="div-lg" class="position-absolute d-none"></div>
+           <!--  三张小图和上下翻页  -->
+           <div class="s-img" >
+			   <!-- 上一张 -->
+				<div class="prve">
+					<a href="javascript:;" id="btn-left"><img src="img/arrow-r.png" alt=""></a>
+				</div>
+				<!--  三张小图 -->
+				<div  class="aa">
+					
+					<div id="ul-imgs" class="sm-img">
+						<!--<img src="" alt="" style="display:none" id="img-sql">-->
+						<div class="s-img1 all-simg">
+							<img src="img/6.1.jpg" alt="">
+						</div>
+						<div class="s-img2 all-simg">
+							<img src="img/6.2.jpg" alt="">
+						</div>
+						<div class="s-img3 all-simg">
+							<img src="img/6.3.jpg" alt="">
+						</div>
+                        <div class="s-img4 all-simg">
+							<img src="img/6.4.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				
+				
+				<!-- 下一张 -->
+				<div class="next">
+					<a href="javascript:;" id="btn-right"><img src="img/arrow-l.png" alt="">
+                    </a>
+				</div>
+        	</div>
+        </div>
+
+                </div>
+                <div class="left-index1">
+                    <h3 id="short_title">月光女神——11朵白玫瑰+洋桔梗+雏菊+尤加利</h3>
+                    <hr class="list_hr1">
+                    <p class="left-index1-p1" id="title">11朵白玫瑰+洋桔梗+雏菊+尤加利精美包装，蝴蝶结扎束</p><br>
+                    <label for="">今日特惠</label>
+                    <span id="hot_price">￥268.00</span>
+                    <p class="left-index1-p2">商品原价 <del id="price">￥553.00</del></p>
+                    <div class="left-index1-div">
+                        <div><img src="img/12.png" alt=""></div>
+                        <a href="">我要分销</a>
+                    </div>
+                    <hr class="list_hr2">
+                    <div class="right-index1-input">
+                        <p>我要订购：</p>
+                        <ul class="count">
+                         <li><button type="text" class="index1-btn1" id="num-jian">-</button></li> 
+                         <li><input type="text" class="input-num" value="1" id="input-num" style="text-align:center"></li> 
+                         <li><button type="text" class="index1-btn2" id="num-jia">+</button></li> 
+                        </ul>
+                    </div><br>
+                    <div class="right-index1-buy">  
+                        <div class="right-index1-buy1" id="gouwu">
+                            <img src="img/a.png" alt="">
+                           <span>加入购物车</span>
+                        </div>
+                        <div class="right-index1-buy2">
+                            <img src="img/a.png" alt="">
+                            <span>立即购买</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="right-index2">
+               <div class="right-index2-div1"><p>商品信息</p></div>
+               <div class="right-index2-div2"><p>顾客评论</p></div>
+               <div class="right-index2-div3"><p>买家问答</p></div>
+               <div class="right-index2-div4"></div>
+           </div>
+           <div class="right-index3">
+               <img src="img/6.jpg" alt="" id="big_p1">
+               <img src="img/6.1.jpg" alt="" id="big_p2">
+               <img src="img/6.2.jpg" alt="" id="big_p3">
+               <!--<img src="img/6.3.jpg" alt="">
+               <img src="img/6.4.jpg" alt="">-->
+           </div>
+           <div class="right-index4">
+               <div class="right-index4-top">
+                   <img src="img/top.png" alt="">
+                   <a href="">上一个:我们的爱——6朵向日葵精美包装，蝴蝶结扎......</a>
+               </div>
+               <div class="right-index4-down">
+                   <img src="img/down.png" alt="">
+                   <a href="">下一个:拥抱幸福——16枝香槟玫瑰配水晶草如图包......</a>
+               </div>
+           </div>
+        </div>
+    
+    </div>
+    <footer></footer>
+    <script src="JS/comon-header.js"></script>
+     <script src="JS/flowers_list.js"></script>
+     <script src="JS/login.js"></script>
+    <script src="JS/car.js"></script>
+     <!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+     <script type="text/javascript" src="js/magnifier.js"></script>-->
+     
+
+</body>
+</html>

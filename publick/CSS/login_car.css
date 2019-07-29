@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.h3{
+     color: gray;
+ }
+ .p{
+     line-height: 30px;
+     color: gray;
+     font-size: 14px;
+ }
+ ul{
+     list-style: none;
+ }
+ button,input{
+     outline: none;border: none
+ }
+ 
+ul.r-float{
+   
+    position: fixed;
+    right: 0px;
+    top:30%;
+} 
+ul.r-float>li{
+    width: 54px;
+    height:54px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    position: relative;
+}
+ul.r-float>li img.all{
+    width:30px;
+    height: 30px;
+    position: absolute;
+    top:12px;left:12px;
+}
+ul.r-float .hover{
+    display: none;
+}
+ul.r-float li:hover {
+    cursor: pointer
+}
+ul.r-float li:hover .active {
+    display: none;
+}
+ul.r-float li:hover .hover{
+    position: absolute;
+    top:12px;left:12px;
+    display: block;
+}
+ul.r-float .text{
+    display: inline-block;
+    width:20px;height:20px;border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    top:-8px;
+    left:-8px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+/*客服*/
+.service_li{
+     position: relative;
+}
+.service_li img.sharp2{
+    position: absolute;
+    left:394px;top:80px;
+    width:20px;
+    height: 20px;
+}
+.service_li:hover .service{
+    display: block
+}
+.service_li .service{
+    width: 400px;
+    position: absolute;
+    top:-55px;left:-412px;
+    border-top:3px solid gray;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    box-shadow: 2px 4px 6px #aeaeae;
+    display: none;
+}
+.service .top>div{
+    float: left;
+}
+.service .top{
+    width: 380px;height:60px;
+    margin: 0 auto;padding-bottom: 10px;
+    border-bottom: 1px solid lightgray 
+}
+.service .top .left{
+    width: 40px;
+    height: 60px;
+    margin-right: 40px; margin-top: 10px;
+}
+.service .top .left>img{
+    width: 40px;
+    height: 40px;
+}
+.service .top .right>h3{
+    margin-top: 10px;
+}
+.service_li .txt{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.service_list{
+    width:100%;
+}
+.service_list>li{
+    width:30%;
+    margin-left: 10px;margin-bottom: 10px;
+    float: left;
+}
+.service_list>li>img{
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    vertical-align: middle;
+}
+/*订购热线*/
+.phone{
+    width:250px;
+    box-shadow: 2px 4px 6px #aeaeae;
+    border-top:3px solid gray;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    position: absolute;
+    top:-6px;
+    left: -264px;
+    display: none;
+}
+.phone_li:hover .phone{
+    display: block
+}
+.phone .left,
+.phone .right{
+    float: left;
+}
+.phone .left{
+    width: 40px;
+    height: 60px;margin: 10px 0 0 20px;
+}
+.phone .left>img{
+   width: 40px;
+    height: 40px;
+ }
+ .phone .right{
+     margin-left: 20px;
+     margin-top: 10px;
+ }
+ .phone .right .h3{
+     color: gray;
+ }
+ .phone .right p{
+     line-height: 30px;
+     color: gray;
+     font-size: 14px;
+ }
+ .phone .right .sharp1{
+     width:20px;height:20px;
+    position: absolute;
+    top:24px;
+    left: 245px;
+ }
+/*微信扫码*/
+.service_li,.phone_li,.two-bar-codes{
+    position: relative;
+}
+.weixin{
+    position: absolute;top:-30px;
+    left: -140px;
+    width:130px;
+    height: 130px;
+    border: 1px solid lightgray;
+    display: none;
+}
+.two-bar-codes:hover .weixin{
+    display: block
+}
+ul.r-float li .weixin img:nth-child(2){
+    width:80px;
+    height:80px;
+    margin: 18px 0px 10px 24px;
+}
+ul.r-float li .weixin>p{
+    margin-top:-10px;
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+ul.r-float li .weixin .sharp{
+    width:15px;height:15px;
+    position: absolute;
+    top:61px;
+    left: 126px;
+}
+/************************登录**********************/
+.login{
+    width:15%;padding-top:30px;min-width:300px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    position: fixed;
+    top:50%;margin-top: -200px;
+    left: 40%;
+   display: none;
+    background: white;z-index: 9999
+}
+#change{
+    width:15%;min-width:300px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    /*position: fixed;*/
+    top:50%;margin-top: -200px;
+    left: 40%;
+    display: none;
+    background: white;
+    z-index: 9999  
+}
+#change div{
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc; 
+}
+#change div:hover{
+    background: silver;
+    opacity: .7;
+}
+.hidde{
+    position: absolute;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    background: silver;
+    color: #fff;
+    right:0;
+    top:0;
+    text-align: center;
+    font-weight: bold;
+}
+#change div p{
+      text-align: center;
+}
+#change .div1{
+    margin-top: 0;
+}
+#change .div1 p{
+    text-align: center;
+}
+#change p{
+    text-align: left;
+}
+#change .div1 img{
+    float:left;
+}
+#change img{
+    width:25px;
+    height:25px;
+    float:right;
+    margin-top:7px;
+}
+.h2{
+    width: 100%;
+    line-height: 24px;
+    text-align: center;
+    font-size: 21px;
+    color: #eb6100;
+    font-weight: normal;
+}
+.border{
+    border:1px solid gray;
+    width: 80%;
+    height:30px;
+    margin:0 auto;
+    margin-top: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    border-radius: 3px;
+}
+.checkbox{
+     margin:0 auto;
+     width: 50%;
+     margin-top: 15px;
+}
+#checkbox{
+    display: none;
+}
+lable:before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.button_login{
+   background-color: red;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    border: none; margin:30px 0 0 25px
+}
+.button_login:hover{
+    cursor: pointer;;
+    background-color: gray
+}
+.change{
+    border: none;
+    margin-bottom: 20px;
+    margin-top:0px;
+}
+.change>span{
+    color: gray;
+    font-size: 14px;
+}
+.change>span+span{
+    margin-left: 30px;
+}
+.change>span:hover{
+    cursor: pointer;
+    text-decoration: underline
+}
+#danger{
+    border: none;
+    font-size: 12px;
+    color: red;margin-top:0px;margin-bottom:0px;
+    text-align: center
+}
+/***************************注册***********************/
+.register{
+    width:15%;padding-top:30px;min-width:300px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    position: fixed;
+    top:50%;margin-top: -200px;
+    left: 40%;
+    background: white;z-index: 9999;display: none
+}
+
+/*********全屏遮罩*************        */
+.opacity{
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    position: fixed;
+    display: none;
+    left:0;
+    top:0;
+
+}
+.close{
+    width:40px;
+    height: 40px;
+    background-color: gray;
+    font-size: 36px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 22px;
+    left: 100%;
+    transition: All 0.4s ease-in-out;
+}
+.close:hover{
+       transform: rotate(360deg);
+        cursor: pointer
+}
+/*******购物车*******/
+.shopping_car{
+    width:70%;
+    margin:0 auto;
+    position: absolute;
+    left:15%;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;display: none;z-index: 9999;background-color: white
+}
+.shopping_car .top{
+    height: 100px;
+}
+.h1{
+    width:100px;
+    line-height: 100px;float: left;
+    color: #eb6100;
+    font-weight: 400;
+    margin-left: 60px;
+}
+.shopping_car .top .txt{
+   float: right;height: 100px;
+   line-height: 100px;
+   margin-right: 30px;
+   color: lightgray;
+}
+.shopping_car .top .txt .now{
+    color: #eb6100;
+}
+table.car_list{
+    width:95%;
+    margin:0 auto;
+    border-top:2px solid #e1e1e1;
+    color: #535353;
+    font-size: 18px;
+}
+table.car_list>thead>tr{
+    height: 80px;
+    background-color: #f7f7f7
+}
+table.car_list>thead>tr>td{
+    margin-right: 30px;
+}
+table.car_list>tfoot>tr{
+    height: 80px;
+}
+.color{
+   text-align: center;
+}
+.box{
+    display: inline-block;
+    margin-top: 10px;
+    width:120px;
+    height:60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #eb6100;
+    color:white;
+    font-size: 20px;
+}
+tbody>tr{
+    height:100px;
+}
+.td_img{
+    width: 90px;
+    height: 80px;
+    padding-top: 10px;
+}
+span.hover:hover{
+    cursor: pointer;
+    color: #eb6100;
+}
+td.button .input{
+    float: left;
+    width: 22px;
+    height: 25px;
+    line-height: 23px;text-align: center;
+    background: none;
+    border: 1px solid #e8e8e8;
+    font-size: 18px;
+    color: #bcbcbc;
+    cursor: pointer;padding:0
+}
+td.button input+input{
+    margin-left: 3px;
+}
+#go_on:hover{
+    cursor: pointer
+}
+#change{
+    display: none;
+}
+#can{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    background:silver;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+         <script src="JS/jquery-1.11.3.js"></script>
+     <script src="JS/comon-header.js">   </script>
+     <link rel="stylesheet" href="css/home.css">
+     <link rel="stylesheet" href="CSS/login_car.css">
+     <style>
+        #flower-house{
+            z-index: 99999;
+         }
+         header{
+             width: 70%;
+             margin: 0 auto;
+         }
+         
+    </style>
+</head>
+<body>
+<div id="flower-house"></div>
+<div id="aa"><!---为了动画效果加 的-->
+  <header></header>
+  <aside></aside>
+    <!--最外层-->
+<div class="b-container">
+    <audio src="11.mp3"></audio>
+    <div class="b-div">
+        <!--1-->
+        <div class="div-1">
+          <!--1-1-->
+           <div class='f1'>
+               <div class="ewm">
+                   <img src="img/home/1.jpg">
+               </div>
+               <p>
+                   <span>关注微信公众号</span>
+               </p>
+               <div class="lxyh">
+                    <span>立享300元优惠</span>
+               </div>
+               <span>一分钟下单,一小时送达！</span>
+           </div>
+           <!--1-2-->
+            <div class='f2'>
+               <div>
+                    <span class="sel-1"><a href="">企业鲜花定制服务</a></span>
+                    <span class="sel-2">
+                        <a href="">
+                        客户营销&nbsp;&nbsp;&nbsp;
+                        员工关怀&nbsp;&nbsp;&nbsp;
+                        促销活动          
+                        </a>
+                    </span>
+                    <span class="sel-3">
+                        <a href="">
+                            爱要大声说出来
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <!--1-3-->
+            <div class="hysl">   
+                <!--上1-->
+                <div>
+                    <p class="p-1">
+                        <a href="">花艺沙龙</a>
+                    </p>
+                    <p class="p-2">
+                        <a href="">FlowerSalon</a>
+                    </p>
+                    <p class="p-3">
+                        <a href="">品味生活 陶冶情操</a>
+                    </p>
+                </div>
+                <!--下2-->
+                <div class="ks">
+                    <div>
+                        <p class="k1"><a href="">开业花篮</a></p>
+                        <p class="k2"><a href="">Grand Opening</a></p>
+                    </div>
+                    <div>
+                        <p class="szb1"><a href="">送&nbsp;长&nbsp;辈</a></p>
+                        <p class="szb2"><a href="">康乃馨，百合花</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--****************************************************************************************-->
+       <!--中间介绍1-->
+        <div class="intro">
+            <p>
+                <a href="http://127.0.0.1:5500/publick/product.html?f_pid=1">爱情鲜花</a>
+                <a href="http://127.0.0.1:5500/publick/product.html?f_pid=1">送·让你怦然心动的人</a>
+            </p>
+            
+            <a href="http://127.0.0.1:5500/publick/product.html?f_pid=1">更多爱情鲜花&gt;&gt;</a>
+        </div>
+        <div class="l-big">
+                <!--列表1-->
+                <div class="list-1">
+                    <!--左-->
+                    <div>
+                        <img src="img/home/6.jpg" alt="">
+                        <div>
+                            <span>爱 情 鲜 花</span>
+                        </div>
+                    </div>
+                    <!--右-->
+                    <div class="list-r">
+                        <ul id="love">
+                    
+                        </ul>
+                    </div>
+                </div>
+                <!--*******************************************************************************-->
+                <!--中间介绍2-->
+                <div class="itr">
+                    <p>
+                        <a href="http://127.0.0.1:5500/publick/product.html?f_pid=2">送长辈鲜花</a>
+                        <a href="http://127.0.0.1:5500/publick/product.html?f_pid=2">赠 父母/恩师/长辈</a>
+                    </p>
+                    
+                        <a href="http://127.0.0.1:5500/publick/product.html?f_pid=2">更多鲜花&gt;&gt;</a>
+                </div>
+                <!--列表2-->
+                <div class="list-1">
+                    <!--左-->
+                    <div>
+                        <img src="img/home/5_0bmy.jpg" alt="">
+                        <div>
+                            <span>长 辈 鲜 花</span>  
+                        </div>
+                    </div>
+                    <!--右-->
+                    <div class="list-r">
+                        <ul id="love2">
+                        
+                        </ul>
+                    </div>
+                </div>
+            <!--*********************************************************-->
+                
+            <!--*********************************************************-->
+                <!--视频-->
+                <div class='video'>
+                <video src="18.mp4" autoplay id='v1'>  
+                </video>
+                  <img src="img/stop.png" alt="" class='control'>
+                </div>
+              <script>
+                    $('.control').click(function(){
+                        if($(this).attr('src')=='img/stop.png'){
+                            v1.pause()
+                            $(this).attr('src','img/play.png')
+                        }
+                         else if($(this).attr('src')=='img/play.png'){
+                            v1.play()
+                            $(this).attr('src','img/stop.png')
+                        }
+                    })
+              </script>
+             <!--*********************************************************-->
+                
+                <!--热销推荐-->
+                <div class="hot">
+                    <span class="lt"></span>
+                    <span class="text-hot">热销推荐 </span>
+                    <span class="rt"></span>
+                </div>
+                <div class="hot-product">
+                    <ul id="love3"></ul>
+                 </div>
+                <!--*********************************************************-->
+        </div>
+</div>
+<footer></footer>
+</div> 
+<script src="JS/home.js"> </script>
+ 
+  <script>
+        $(function(){
+            $("#aa").css("display","none")
+            $.ajax({
+                url:"index.html",
+                type:"get",
+               success:function(result){ 
+                   $(result).replaceAll("#flower-house");
+                    $("#canvas").click(function(){
+                    $("#ci-particles").css("display","none");
+                    $("#aa").css("display","block")
+                   setTimeout(function(){
+                        $('.div-1>div:first-child').css('left',0)
+                        $('.div-1>div:nth-child(2)').css('transform','scale(1)')
+                        $('.hysl').css('right',0);
+                    },100)
+                })
+                setTimeout(function(){
+                     $("#ci-particles").css("display","none");
+                    $("#aa").css("display","block")
+                     setTimeout(function(){ 
+                         $('.div-1>div:first-child').css('left',0)
+                         $('.div-1>div:nth-child(2)').css('transform','scale(1)')
+                         $('.hysl').css('right',0);
+                        },100)
+                },8000)
+                }
+            })
+           
+        })
+    </script>
+    <script src="JS/login.js"></script>
+    <script src="JS/car.js"></script>
+</body>
+</html>

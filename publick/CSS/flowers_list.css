@@ -1,0 +1,409 @@
+#flower-big{
+    width: 70%;
+    margin: 50px auto;
+    overflow: hidden;
+   
+}
+/*左侧样式*/
+#flower-left{
+    width: 25%;
+    float: left;
+    overflow: hidden;
+}
+.flower-up{
+    width: 100%;
+    background-color: red;
+    height: 35px;
+    text-align: center;
+}
+.flower-up span{
+    color: white;
+    font-family: "Arial";
+    line-height: 35px;
+    font-size: 16px;
+}
+.flower-down{
+
+    overflow: hidden;
+}
+.down1{
+    margin-top: 10px;
+     width: 99.5%;
+    border: 0.5px solid #ccc;
+    border-radius: 5%;
+}
+.down2,.down3,.down4,.down5,.down6,.down7,.down8{
+    width: 99.5%;
+    border: 0.5px solid #ccc;
+    margin: 20px 0;
+     border-radius: 5%;
+}
+.down1 img,.down2 img,.down3 img,.down4 img,.down5 img,.down6 img,.down7 img,.down8 img{
+    width: 100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.flower-down-1,.flower-down-2,.flower-down-3,.flower-down-4,.flower-down-5,.flower-down-6,.flower-down-7,.flower-down-8{
+    line-height: 20px;
+    text-align: center;
+    margin: 5px 0;
+}
+.flower-down p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.down1 .p1,.down2 .p2,.down3 .p3,.down4 .p4,.down5 .p5,.down6 .p6,.down7 .p7,.down8 .p8{
+     color: red;
+     margin-top: 15px;
+}
+/*右侧样式*/
+#flower-right{
+    width: 72%;
+    margin-left: 2%;
+    float: left;
+    border: 1px solid #ccc;
+}
+/*右侧第一个大盒子样式*/
+.flower-right-index1{
+    overflow: hidden;
+    width: 100%;
+}
+/*.right-index1{
+    width: 45%;
+    float: left;
+}*/
+/*右侧第一个大盒子的右侧的样式*/
+
+.magnifier{
+    width: 54%;
+	position: relative;
+	margin-top: 1%;
+	/*margin-left: 1%;*/
+    float: left;
+}
+.magnifier .b-img{
+    border: 1px solid #EEEEEE;
+    width:100%;
+    /*margin-right: 15px;*/
+    position: relative;
+    display: none;
+    margin-top: 0;
+}
+.magnifier .active{
+    display: block;
+}
+.magnifier .b-img img{
+    height: 564.86px;
+}
+.aa .all-img{
+    width: 90.3px;
+}
+.magnifier .b-img>img{
+    width: 100%;
+}
+.magnifier .b-img:hover{
+    cursor:crosshair;
+}
+.magnifier .b-img>a{
+    width:20px;height: 20px; 
+    background:url("img/58.png") no-repeat 0 0 ;
+    background-position: -465px -666px;
+    position: absolute;top:382px;left:380px;
+}
+/*放大镜效果的大图 */
+ .position-absolute{
+    position: absolute;
+    width:400px;height:400px;
+    top:32px;left:523px;
+    border: 1px solid #EEEEEE;
+    z-index: 9999;
+}
+ .d-none{
+    display: none;
+}
+.d-block{
+     display:block;
+}
+/*鼠标滑过中图片时的黑色半透明*/
+ #mask{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:0px;
+    left :0px;
+    background: #333;
+    opacity: .3
+}
+/********** 中图片上面的遮罩层*/
+ #super-mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;left:0px;
+    
+}
+/*三张小图和上下翻页*/
+.magnifier .prve,.magnifier .next{
+    width: 10%;
+}
+.magnifier .next{
+    margin-left: 90%;
+}
+.prve img{
+    width: 100%;
+    /*line-height: 100px;*/
+}
+.magnifier .aa{
+    width:80%;
+    overflow: hidden; 
+    position: absolute;
+    margin-left: 8%;
+    margin-right: 5%;
+    /*top:0px;
+    left: 35px;*/
+}
+.magnifier .s-img{
+    /*height:100px;*/
+    width:100%;
+    /*line-height: 100px;*/
+    margin-top:7px;
+    position: relative;
+    overflow: hidden;
+}
+.magnifier .s-img>div{
+    float: left;
+}
+.magnifier .sm-img{
+  width: 100%;
+  overflow: hidden;
+  margin-left: 5%;
+}
+.magnifier .s-img>div.next{
+    position: absolute;
+    /*top:-1px;
+    left:365px;*/
+}
+.magnifier .s-img div.b-red{
+   border: 3px solid #E31436;
+}
+.magnifier .s-img .all-simg{
+    /*border: 1px solid #eeeeee;*/
+    display: inline-block;
+    margin-left: 5%;
+}
+.aa .sm-img{
+    width: 100%;
+}
+.aa .sm-img .all-simg{
+    width: 23%;
+}
+.magnifier .s-img .all-simg:hover{
+    cursor: pointer;/*border: 3px solid #E31436;*/
+}
+.magnifier .s-img .all-simg>img{
+    width: 100%;
+}
+/* 上一张  */ 
+/*.prve,.next{
+    width:40px;z-index: 999;
+}*/
+.prve>a,.next>a{
+    display: inline-block;
+    width: 100%;
+    height:68px;
+    border: 1px solid #eeeeee;
+    /*background:url("img/arrow-l.png") no-repeat 0 0 ;
+    background-position: -769px -145px;*/
+}
+/*.next>a{
+     background:url("img/arrow-r.png") no-repeat 0 0 ;
+    background-position: -793px -145px;
+}*/
+.magnifier .r-con{
+     /*border: 1px solid red;*/
+     margin-bottom: 20px;
+     position: absolute;top:30px;right:0px;
+}
+
+
+/*右侧第一个大盒子的左侧的样式*/
+.left-index1{
+    width: 40%;
+    float: left;
+    margin-left: 6%;
+}
+.left-index1 h3{
+    margin-top: 5%;
+}
+.list_hr1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-top: 1px solid #d6d6d6;
+}
+.left-index1-p1{
+    font-size: 12px;
+    margin-top: 10%;
+}
+.left-index1 span{
+    font-size: 20px;
+    color: red;
+}
+.left-index1-p2{
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 2%;
+}
+.left-index1-div{
+    width: 30%;
+    height: 30px;
+    border: 0.5px solid #ccc;
+    margin-top: 4%;
+}
+.left-index1-div div{
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    background-color: red;
+    margin-top: 0;
+    float: left;
+}
+.left-index1-div img{
+    width: 80%;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.left-index1-div a{
+    text-decoration: none;
+    line-height: 28px;
+    float: left;
+    margin-left: 5%;
+    font-size: 15px;
+    color: grey;
+}
+.list_hr2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    border-top: 1px solid #d6d6d6;
+}
+.right-index1-input{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+.right-index1-input p{
+    float: left;
+    margin-top: 4%;
+}
+.right-index1-input .index1-btn1,.input-num{
+    float: left;
+    margin-top: 3%;
+}
+.index1-btn1,.index1-btn2{
+    background-color: white;
+    width: 7%;
+    height: 30px;
+    margin-top: 3%;
+    outline: none;
+    border: 0;
+    border: 0.5px solid #ccc;
+}
+.index1-btn2{
+    float: left;
+    margin-left: 1%;
+}
+.right-index1-input .input-num{
+    width: 15%;
+    height: 28px;
+    margin-left: 1%;
+    border: 0.5px solid #ccc;
+}
+.right-index1-buy{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+.right-index1-buy1,.right-index1-buy2{
+    width: 30%;
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    border: 0.5px solid #ccc;
+}
+.right-index1-buy1:hover,
+.right-index1-buy2:hover{
+    cursor: pointer;
+}
+.right-index1-buy1 img,.right-index1-buy2 img{
+    width: 20%;
+    height: 25px;
+    float: left;
+    margin-top: 6%;
+    margin-left: 3%;
+}
+.right-index1-buy1 span,.right-index1-buy2 span{
+    font-size: 14px;
+    /*float: left;*/
+    margin-left: 5%;
+}
+.right-index1-buy2{
+    margin-left: 5%;
+    background-color: red;
+}
+.right-index1-buy2 span{
+    color: white;
+}
+/*右侧第二个大盒子的样式*/
+.right-index2{
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    float: left;
+    overflow: hidden;
+    
+    border-top: 0.5px solid #ccc;
+    border-bottom: 0.5px solid #ccc;
+}
+.right-index2 .right-index2-div1,.right-index2-div2,.right-index2-div3{
+    width: 15%;
+    float: left;
+    border-right: 0.5px solid #ccc;
+    line-height: 50px;
+    text-align: center;
+}
+/*右侧第三个大盒子的样式*/
+.right-index3{
+    width: 100%;
+    float: left;
+}
+.right-index3 img{
+    width: 64%;
+    margin-left: 5%;
+}
+/*右侧第四个大盒子的样式*/
+.right-index4{
+    width: 100%;
+    float: left;
+    height: 55px;
+    margin-top: 10px;
+    border-top: 0.5px solid #ccc;
+}
+.right-index4-top{
+    width: 50%;
+    float: left;
+}
+.right-index4-down{
+    float: right;
+}
+.right-index4-top img,.right-index4-down img{
+    width: 3%;
+    background-color: #ccc;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.right-index4-top a,.right-index4-down a{
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+}

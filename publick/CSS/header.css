@@ -1,0 +1,233 @@
+*{margin: 0px;padding: 0px;}
+
+/*****************************************/
+#po_re{
+     position: fixed;
+     display: none;
+      top:20px;
+    left: 50%;
+    margin-left: -400px;
+    z-index: 999;
+}
+.search_out{
+    border: 8px solid rgba(219,218,215,0.4);
+    border-radius: 8px;
+    background: white;
+    /*height: 250px;*/
+    width: 800px;
+    
+   
+   overflow: scroll
+}
+
+.close1{
+    width:40px;
+    height: 40px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    font-size: 36px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    background: #888888;
+    position: absolute;
+    top: -22px;
+    left:798px;
+    
+}  
+.close1:hover{
+   background:#6fa7ed 
+} 
+.search_out .input{
+    margin-top: 10px;
+    margin-left: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.search_out input{
+    width: 500px;
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #e5e5e5
+}   
+.search_out .input span{
+    display: inline-block;
+    background: #e5e5e5;
+    height: 32px;
+    width: 95px; 
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid #c4c3c8;
+}   
+.search_out .product{
+   margin-bottom: 30px;
+    margin-left: 30px;
+}
+.search_out .product a{
+    font-size: 20px;
+    color: #6fa7ed;
+    text-decoration: underline;
+}
+.search_out .product .img{
+    width: 92px;
+    height: 92px;border: 1px solid #c4c3c8;
+    border-radius: 3px;
+     margin-top: 10px;
+    
+}
+.search_out .product img{
+    width: 92px;
+    height: 92px;
+   
+}
+.price{
+    font-size: 18px;
+     color: #ea735e;
+     margin-top: 10px;
+}
+#price_search{
+    color: #ea735e
+}
+/************************************************/
+header{
+    width:100%;
+}
+header a{
+    text-decoration:none;
+    color:#333;
+}
+header .xh,.zw,.lp{
+    font-size:13px;
+    justify-content: space-between;
+    list-style: none;
+    }
+header .xh>li{
+    margin: 0 15px;
+    float:left;
+}
+header .zw>li{
+    float:left;
+    margin:0 15px;
+}
+header .lp>li{
+    float:left;
+    margin:0 15px;
+}
+header .flower{
+    top:46px;
+    left:-101px;
+    width:825px;
+    
+    }
+header .botany{
+    top:46px;
+    left:40px;
+    width:825px;
+}
+header .gift{
+    top:46px;
+    left:40px;
+    width:825px;
+}
+header .container{
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+header .container>div{
+    position:relative;
+}
+header .container>div>img.ss{
+    position: absolute;
+    top:18px;left:114px;
+    height: 25px;
+}
+header .container>div>a>img+img{
+    height:50px;
+}
+header .container>div>ul{
+  list-style: none;
+  display: flex;
+}
+header .container>div>ul>li{
+    height: 50px;
+    line-height: 50px;
+    padding: 5px 54px 0px;
+}
+header .container>div>ul>li:hover{
+    font-size:13px;
+}
+header .container>div>ul>li>div{
+    display: none;
+}
+header .container>div>ul>li:hover div{
+    display: block;
+    z-index: 999;
+    background: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+header .container>div>ul>li:hover div a{
+    color:#c4c3c8;
+        border-radius: 10px;
+    border: 1px solid silver
+}
+header .container>div>input{
+    width:155px;
+    height:23px;
+    margin-top:18px; 
+    border:1px solid #333;
+}
+header .lbt ul {list-style:none;}
+
+header .lbt {
+    width:70%;
+    height:443px;
+    position:relative;
+    overflow:hidden;
+    margin:0 auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+header .lbt .slidebox {
+    position:absolute;
+    top:0;
+    left:0;
+    height:443px;
+    width:100%;
+
+
+    }
+    
+header .lbt .slidebox li {
+    float:left;
+    height:443px;
+    left:0;
+    top:0;
+    width:100%;
+   
+}
+header .lbt .slidebox li img {
+    display:block;
+    height:443px;
+    width:100%;
+}
+header .dot {
+    position:absolute;
+    width:100%;
+    height:30px;
+    background:rgba(0,0,0,0.3);
+    text-align:right;bottom:0;
+    left:0;
+}
+header .dot p {width:100%;margin-right:10px;text-align: center;}
+header .dot b {width:25px;height:25px;
+border-radius:25px;
+color:transparent;display:inline-block;border:1px solid #fff;
+background:#fff;text-align:center;line-height:25px;
+cursor:pointer;font-weight:bold;margin-left: 30px;}
+header .dot .cur {background:silver;color:transparent;}
