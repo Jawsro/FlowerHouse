@@ -12,13 +12,13 @@ $(document).ready(function (){
            for(var item of result){
             html+=`
                  <li>
-                        <a href="http://127.0.0.1:5500/publick/flowers_list.html?fid=${item.fid}">
+                        <a href="http://localhost:8080/flowers_list.html?fid=${item.fid}">
                             <img src="${item.img}"  alt="">
                         </a>
                         <div class="text">
                             <div>
                                   <p>
-                                      <a href="http://127.0.0.1:5500/publick/flowers_list.html?fid=1">${item.title}</a>
+                                      <a href="http://localhost:8080/flowers_list.html?fid=1">${item.title}</a>
                                   </p>
                                   <p>${item.price.toFixed(2)}</p>
                             </div>
